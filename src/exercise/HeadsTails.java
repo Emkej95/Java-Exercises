@@ -3,7 +3,7 @@ package exercise;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Third {
+public class HeadsTails {
     public static void headsTails() {
         Random random = new Random();
         Scanner input1 = new Scanner(System.in);

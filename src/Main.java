@@ -1,6 +1,6 @@
-import exercise.First;
-import exercise.Second;
-import exercise.Third;
+import exercise.NameGenerator;
+import exercise.HigherLower;
+import exercise.HeadsTails;
 
 import java.util.Scanner;
 
@@ -24,11 +24,11 @@ public class Main {
 
     private static void runExercise(String exerciseNumber) {
         if (exerciseNumber.equals("1")) {
-            First.nameGenerator();
+            NameGenerator.nameGenerator();
         } else if (exerciseNumber.equals("2")) {
-            Second.higherLower();
+            HigherLower.higherLower();
         } else if (exerciseNumber.equals("3")) {
-            Third.headsTails();
+            HeadsTails.headsTails();
         }
     }
 }
