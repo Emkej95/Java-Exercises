@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class TemperatureConverter {
 
-    public void getUnits() {
+    public void runExercise() {
         try {
-            System.out.println("Welcome to temperature converter.\nPlease enter in a specified order: value, unit and destiny unit");
+            System.out.println("\nWelcome to temperature converter.\nPlease enter in a specified order: value, unit and destiny unit");
             Scanner input = new Scanner(System.in);
             String userInput = input.nextLine();
             String[] unitList = userInput.toLowerCase().split("[-, ]");
@@ -70,7 +70,7 @@ public class TemperatureConverter {
         System.out.println("Do you want to make another conversion? Y/N");
         String newConversion = another.nextLine();
         if (newConversion.equalsIgnoreCase("y")) {
-            getUnits();
+            runExercise();
         }
     }
 }

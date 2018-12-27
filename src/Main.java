@@ -7,7 +7,7 @@ public class Main {
         String exerciseNumber;
 
         do {
-            System.out.println("\nEnter number which exercise you want to check:");
+            System.out.println("\nEnter number which exercise you want to check (enter \"exit\" to quit):");
             exerciseNumber = input1.nextLine();
 
             if (!exerciseNumber.equalsIgnoreCase("exit")) {
