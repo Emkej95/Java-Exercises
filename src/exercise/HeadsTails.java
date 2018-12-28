@@ -17,12 +17,16 @@ public class HeadsTails {
 
             if (getNumber() == 1 && guess == 1) {
                 System.out.println("Correct! :) It's heads!");
+                askNewGame();
             } else if (getNumber() == 2 && guess == 2) {
                 System.out.println("Correct! :) It's tails!");
+                askNewGame();
             } else if (getNumber() == 1 && guess == 2) {
                 System.out.println("Wrong! :( It's heads!");
+                askNewGame();
             } else if (getNumber() == 2 && guess == 1) {
                 System.out.println("Wrong! :( It's tails!");
+                askNewGame();
             } else {
                 System.out.println("You have to enter \"heads\" or \"tails\".");
             }
@@ -33,5 +37,14 @@ public class HeadsTails {
 
     private int getNumber() {
         return random.nextInt(2) + 1;
+    }
+
+    private void askNewGame() {
+        Scanner another = new Scanner(System.in);
+        System.out.println("Do you want to play again? Y/N");
+        String newGame = another.nextLine();
+        if (newGame.equalsIgnoreCase("y")) {
+            runExercise();
+        }
     }
 }

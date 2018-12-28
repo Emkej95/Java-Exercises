@@ -16,12 +16,16 @@ public class HigherLower {
 
         if (guess.equalsIgnoreCase("higher") && firstNumber < secondNumber) {
             System.out.println("Correct! :) New number is " + secondNumber + ".");
+            askNewGame();
         } else if (guess.equalsIgnoreCase("lower") && firstNumber > secondNumber) {
             System.out.println("Correct! :) New number is " + secondNumber + ".");
+            askNewGame();
         } else if (guess.equalsIgnoreCase("lower") && firstNumber < secondNumber) {
             System.out.println("Wrong! :( New number is " + secondNumber + ".");
+            askNewGame();
         } else if (guess.equalsIgnoreCase("higher") && firstNumber > secondNumber) {
             System.out.println("Wrong! :( New number is " + secondNumber + ".");
+            askNewGame();
         } else {
             System.out.println("You have to enter \"higher\" or \"lower\".");
         }
@@ -29,5 +33,14 @@ public class HigherLower {
 
     private int getNumber() {
         return random.nextInt(10) + 1;
+    }
+
+    private void askNewGame() {
+        Scanner another = new Scanner(System.in);
+        System.out.println("Do you want to play again? Y/N");
+        String newGame = another.nextLine();
+        if (newGame.equalsIgnoreCase("y")) {
+            runExercise();
+        }
     }
 }
