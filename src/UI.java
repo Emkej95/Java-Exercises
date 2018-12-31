@@ -7,6 +7,7 @@ class UI {
     private TemperatureConverter temperatureConverter = new TemperatureConverter();
     private AgeCalculator ageCalculator = new AgeCalculator();
     private EncryptDecrypt encryptDecrypt = new EncryptDecrypt();
+    private FizzBuzz fizzBuzz = new FizzBuzz();
 
     void runExercise(String exerciseNumber) {
         if (exerciseNumber.equals("1")) {
@@ -21,6 +22,8 @@ class UI {
             ageCalculator.runExercise();
         } else if (exerciseNumber.equals("6")) {
             encryptDecrypt.runExercise();
+        } else if (exerciseNumber.equals("7")) {
+            fizzBuzz.runExercise();
         }
     }
 }
