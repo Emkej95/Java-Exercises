@@ -8,6 +8,9 @@ class UI {
     private AgeCalculator ageCalculator = new AgeCalculator();
     private EncryptDecrypt encryptDecrypt = new EncryptDecrypt();
     private FizzBuzz fizzBuzz = new FizzBuzz();
+    private RockPaperScissors rockPaperScissors = new RockPaperScissors();
+    private HangMan hangMan = new HangMan();
+    private LoveCalculator loveCalculator = new LoveCalculator();
 
     void runExercise(String exerciseNumber) {
         if (exerciseNumber.equals("1")) {
@@ -24,6 +27,12 @@ class UI {
             encryptDecrypt.runExercise();
         } else if (exerciseNumber.equals("7")) {
             fizzBuzz.runExercise();
+        } else if (exerciseNumber.equals("8")) {
+            rockPaperScissors.runExercise();
+        } else if (exerciseNumber.equals("9")) {
+            hangMan.runExercise();
+        } else if (exerciseNumber.equals("10")) {
+            loveCalculator.runExercise();
         }
     }
 }
