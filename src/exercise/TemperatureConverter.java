@@ -18,17 +18,17 @@ public class TemperatureConverter {
 
     private void convertUnits(String currentUnit, String destinyUnit, int currentValue) {
 
-        if (currentUnit.equalsIgnoreCase("celsius") && destinyUnit.equalsIgnoreCase("fahrenheit")) {
+        if (currentUnit.equalsIgnoreCase("celsius") && (destinyUnit.equalsIgnoreCase("fahrenheits") || destinyUnit.equalsIgnoreCase("fahrenheit"))) {
             celsiusToFahrenheit(currentValue);
-        } else if (currentUnit.equalsIgnoreCase("celsius") && destinyUnit.equalsIgnoreCase("kelvin")) {
+        } else if (currentUnit.equalsIgnoreCase("celsius") && (destinyUnit.equalsIgnoreCase("kelvin") || destinyUnit.equalsIgnoreCase("kelvins"))) {
             celsiusToKelvin(currentValue);
-        } else if (currentUnit.equalsIgnoreCase("fahrenheit") && destinyUnit.equalsIgnoreCase("celsius")) {
+        } else if ((currentUnit.equalsIgnoreCase("fahrenheit") || currentUnit.equalsIgnoreCase("fahrenheits")) && destinyUnit.equalsIgnoreCase("celsius")) {
             fahrenheitToCelsius(currentValue);
-        } else if (currentUnit.equalsIgnoreCase("fahrenheit") && destinyUnit.equalsIgnoreCase("kelvin")) {
+        } else if ((currentUnit.equalsIgnoreCase("fahrenheit") || currentUnit.equalsIgnoreCase("fahrenheits")) && (destinyUnit.equalsIgnoreCase("kelvin") || destinyUnit.equalsIgnoreCase("kelvins"))) {
             fahrenheitToKelvin(currentValue);
-        } else if (currentUnit.equalsIgnoreCase("kelvin") && destinyUnit.equalsIgnoreCase("celsius")) {
+        } else if ((currentUnit.equalsIgnoreCase("kelvin") || currentUnit.equalsIgnoreCase("kelvins")) && destinyUnit.equalsIgnoreCase("celsius")) {
             kelvinToCelsius(currentValue);
-        } else if (currentUnit.equalsIgnoreCase("kelvin") && destinyUnit.equalsIgnoreCase("fahrenheit")) {
+        } else if ((currentUnit.equalsIgnoreCase("kelvin") || currentUnit.equalsIgnoreCase("kelvins")) && (destinyUnit.equalsIgnoreCase("fahrenheits") || destinyUnit.equalsIgnoreCase("fahrenheit"))) {
             kelvinToFahrenheit(currentValue);
         } else {
             System.out.println("Wrong temperature units!");
